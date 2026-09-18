@@ -1,0 +1,21 @@
+{
+  "name": "codemaster",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace @codemaster/web",
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces",
+    "lint": "npm run lint --workspaces",
+    "desktop:dev": "npm run dev --workspace @codemaster/desktop",
+    "api:dev": "npm run dev --workspace @codemaster/api",
+    "worker:dev": "npm run dev --workspace @codemaster/execution-worker"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
